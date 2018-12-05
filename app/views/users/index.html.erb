@@ -1,0 +1,20 @@
+<h1>Users#index</h1>
+<p>Find me in app/views/users/index.html.erb</p>
+
+<table>
+  <thead>
+    <td>ID</td>
+    <td>email</td>
+    <td>name</td>
+  </thead>
+
+  <% @users.each do |user| %>
+  <tr>
+    <td><%= user.id %></td>
+    <td><%= user.email %></td>
+    <td><%= user.name %></td>
+  </tr>
+  <% end %>
+</table>
+
+<%= will_paginate @user %>
